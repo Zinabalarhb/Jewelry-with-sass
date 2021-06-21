@@ -1,0 +1,240 @@
+
+/*-----------------Start Header Buttom------------------*/
+.header_buttom.sticky-header.sticky .main_menu_inner{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_buttom.sticky-header.sticky .logo_sticky{
+    display: block;
+}
+.header_black .header_buttom{
+    border: 1px solid $border-version;
+}
+.sticky-header.sticky{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    background: rgba(225,225,225,.9);
+    box-shadow: 0 1px 3px rgba(0, 0,0,0.11);
+    animation-name:fadeDown ;
+    animation-duration: 900ms;
+    animation-timing-function: cubic-bezier(0.2,1,0.22,1);
+    animation-delay: 0S;
+    animation-iteration-count: 1;
+    animation-duration: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+.header_buttom.sticky-header.sticky .main_menu_inner{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_black .sticky-header.sticky{
+    background: rgba(54, 63,77,0.9);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.11);
+}
+
+.main_menu_inner{
+    text-align: center;
+
+
+}
+.logo_sticky{
+    display: none;
+    margin-right: 35px;
+    a img{
+            max-width: 120px;
+       }
+}
+.main_menu nav > ul > li{
+    display: inline-block;
+    position: relative;
+    & > ul > li > a{
+        color: #808080;
+        font-size: 13px;
+        text-transform: capitalize;
+        line-height: 18px;
+        margin-bottom: 15px;
+        display: block;
+        font-weight: 400;
+    }
+    & > a i{
+        margin-left: 2px;
+    }
+    &:hover a{
+        color: $gold-color;
+    }
+    &.active > a{
+       color: $gold-color;
+   }
+   &:first-child a{
+       padding-left: 0;
+   }
+   &:last-child a{
+       padding-right: 0;
+   }
+   ul.sub_menu{
+    position: absolute;
+    min-width: 200px;
+    padding: 30px 25px;
+    background:$wight-color;
+    border: 1px solid #ebebeb;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0 0 0;
+    left: 0;
+    right: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 9;
+    top: 100%;
+    text-align: left;
+    & > li > a{
+        font-size: 15px;
+    }
+    & > li:last-child > a{
+        margin-bottom: 0;
+    }
+    & > {
+        margin-bottom: 0;
+    }
+    
+}
+
+   ul.mega_menu > li{
+       width: 33%;
+       float: left;
+       ul li:last-child a{
+           margin-bottom: 0;
+       }
+       a{
+           text-transform: uppercase;
+           color: $background-version;
+           font-weight: 500;
+           margin-bottom: 30px;
+           &:hover{
+               color: #c09578;
+           }
+       }
+       ul li a{
+           color: #808080;
+           font-size: 13px;
+           line-height: 18px;
+           margin-bottom: 11px;
+           display: block;
+           text-transform: capitalize;
+           &:hover{
+               color: #c09578;
+           }
+       }
+   }
+   & >a{
+    display: block;
+    padding: 19px 20px;
+    } 
+}
+
+.main_menu nav ul li{
+    ul.mega_menu{
+        position: absolute;
+        min-width: 580px;
+        padding: 30px 25px 35px ;
+        background: $wight-color;
+        border: 1px solid #ebebeb;
+        transform: perspective(600px) rotateX(-90deg);
+        transform-origin: 0 0 0;
+        left: 0;
+        right: auto;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        z-index: 9;
+        top: 100%;
+        text-align: left;
+    }
+    &:hover .sub_menu,
+    &:hover .mega_menu{
+        opacity: 1;
+        visibility: visible;
+        transform: perspective(600px) rotateX(0deg);
+    }
+    & ul li.active a,
+    ul li a{
+        &:hover{
+            color: #c09578;
+        }
+    }
+    ul.sub_menu.pages{
+        left: inherit;
+        right: inherit;
+    }
+
+}
+
+.ion-chevron-down{
+    font-size: 14px;
+    padding: 3px;
+}
+
+.header_black .main_menu nav > ul >li {
+    ul.sub_menu{
+        background: $background-version;
+        border: 1px solid $border-version;
+        li a{
+            color: $wight-color;
+            font-family: serif;
+            &:hover{
+                color: $gold-color;
+            }
+        }
+    }
+    ul.mega_menu{
+        background: $background-version;
+        border: 1px solid $border-version;
+        & > li > a{
+            color: $wight-color;
+            font-family: serif;
+            &:hover{
+                color: $gold-color;
+            }
+        }
+    }
+    & > a{
+        color: $wight-color;
+        font-family: "Poppi";
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 18px;
+    } 
+    &.active > a{
+        color: $gold-color;
+    }
+    &:hover > a{
+        color: $gold-color;
+    }
+    ul.mega_menu{
+        background: $background-version;
+        border: 1px solid $border-version;
+        & > li > a{
+            color: $wight-color;
+            font-family: serif;
+            &:hover{
+                color: $gold-color;
+            }
+        }
+        & >li ul li a{
+            color: $wight-color;
+            &:hover{
+                color: $gold-color;
+            }
+        }
+    }
+} 
+
+/*-----------------End Header Buttom------------------*/
+

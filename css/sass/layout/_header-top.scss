@@ -1,0 +1,157 @@
+/*-----------------Start Header Middle------------------*/
+.home_black_version{
+    background:$background-version;
+}
+
+    .social-icone {
+        ul{
+            li{
+                display: inline-block;
+                margin-left: 5px;
+                &:first-child{
+                    margin-left: 0;
+                }
+                a{
+                    background: $a-background;
+                    color: $a-color;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    border-radius: 50%;
+                    &:hover{
+                        background: $gold-color;
+                        color: $wight-color;
+                    }
+                }
+            }
+        } 
+    
+    }
+  
+
+    .top_right >{
+        ul >{
+            li{
+                display: inline-block;
+                position: relative;
+                padding-left: 20px;
+                margin-left: 20px;
+                &:hover ul.dropdown-currency,
+                &:hover ul.dropdown-languge,
+                &:hover ul.dropdown-links{
+                    top: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+                &:first-child{
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+                &:before{
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 15px;
+                    background: #ebebeb;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                }
+                &:first-child:before{
+                    display: none;
+                }
+               & > a{
+                    color: $background-version;
+                    text-transform: capitalize;
+                    line-height: 26px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    display: block;
+                    font-weight: 400;
+                    padding: 9px 0;
+                    i{
+                        margin-left: 3px;
+                        font-size: 10px;
+                    }
+                }
+               
+            }
+        }
+    }
+            
+
+    .header_black{
+        .header_top{
+            border-bottom: 1px solid $border-version;
+        }
+            .dropdown-links{
+            left: -98%;
+            }
+            .top_right >{
+                ul >{
+                    li{
+                        &:hover ul.dropdown-currency,
+                        &li:hover ul.dropdown-links{
+                            top: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                        
+                        }
+                    & > a{
+                            color: #ffffff;
+                            &:not([href]),&:not([tabindex]){
+                              color: #ffffff;
+                                &:hover{
+                                    color: $gold-color;
+                                }
+                            }   
+                        }
+                        &:before{
+                            background: $border-version;
+                        }
+                    }
+                }
+            }
+    }
+      
+.dropdown-currency,
+.dropdown-languge,
+.dropdown-links{
+    background: $a-background;
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.2);
+    min-width: 200px;
+    text-align: center;
+    top:125%;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    left: -154%;
+    z-index: 9999;
+    padding: 0 15px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    li{
+        border-bottom: 1px solid $border-version;
+        line-height: 36px;
+        padding: 5px 0;
+        &:last-child{
+            border-bottom: 0;
+        }
+        a{
+            text-transform: capitalize;
+            display: block;
+            font-size: 12px;
+            color: $wight-color;
+            text-align: center;
+            &:hover{
+                color: $gold-color;
+                }
+        }
+    }
+    
+}
+/*-----------------End Header Top------------------*/

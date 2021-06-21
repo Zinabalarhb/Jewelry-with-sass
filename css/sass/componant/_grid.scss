@@ -1,0 +1,66 @@
+ /*common styling */
+ *{
+     box-sizing: border-box;
+     &::after,&::before{
+         box-sizing: border-box;
+     }
+     &:focus{
+        outline: none !important;
+    }
+ }
+html,
+body{
+    height: 100%;
+}
+body{
+    line-height: 24px;
+    visibility:visible;
+    color: $min-color;
+    font : {
+       size: 14px;
+       style:normal ;
+       weight: 400;
+       family: "Poppins", sans-serif;
+    }
+}
+p:last-child{
+    margin-bottom: 0;
+}
+a,
+button{
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:focus{
+    box-shadow: none;
+}
+a,
+button,
+img,
+input,
+span{
+    transition: all 0.3s ease 0s;
+}
+a:focus{
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+button,
+input[type="submit"]{
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
